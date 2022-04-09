@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'moleculewords.apps.MoleculewordsConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
