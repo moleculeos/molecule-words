@@ -8,19 +8,19 @@ class Language(models.Model):
 
     @property
     def words_amount(self):
-        return len(self.words)
+        return len(self.words.all())
 
     @property
     def good_words_amount(self):
-        return self.words.filter(known_level=2)
+        return len(self.words.filter(known_level=2))
     
     @property
     def medium_words_amount(self):
-        return self.words.filter(known_level=1)
+        return len(self.words.filter(known_level=1))
 
     @property
     def almost_words_amount(self):
-        return self.words.filter(known_level=0)
+        return len(self.words.filter(known_level=0))
 
     def __str__(self):
         return self.name
